@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="styless.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1>Tic Tac Toe</h1>
+    <div class="scoreboard">
+      <span id="playerXScore">X: 0</span> |
+      <span id="playerOScore">O: 0</span>
+    </div>
+    <div class="status" id="status">Player X's turn</div>
+    <div class="board" id="board"></div>
+    <div class="buttons">
+      <button onclick="restartGame()">Restart</button>
+      <button onclick="newGame()">New Game</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
