@@ -1,66 +1,87 @@
-* {
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
-}
-
+/* Background Gradient */
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background: #f7f7f7;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at top, #1f1c2c, #928dab);
+    font-family: 'Poppins', sans-serif;
 }
 
-.game-container {
-  text-align: center;
+/* Main container */
+.container {
+    text-align: center;
+    color: white;
 }
 
-h1 {
-  margin-bottom: 10px;
+/* Game title */
+.title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px #ffffff;
 }
 
-.scoreboard {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-.status {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
-  color: #333;
-}
-
+/* Tic Tac Toe board */
 .board {
-  display: grid;
-  grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3, 100px);
-  gap: 5px;
-  margin: 0 auto 20px;
+    width: 330px;
+    height: 330px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin: 0 auto 20px;
 }
 
+/* Cell styling */
 .cell {
-  background: #fff;
-  border: 2px solid #444;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.5rem;
-  cursor: pointer;
-  transition: background 0.3s;
+    width: 100px;
+    height: 100px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #00eaff;
+    box-shadow: 0 0 10px rgba(0, 238, 255, 0.2);
 }
 
 .cell:hover {
-  background: #e0e0e0;
+    background: rgba(255,255,255,0.15);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 238, 255, 0.6);
 }
 
-button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  margin: 0 5px;
-  cursor: pointer;
+/* Win highlight */
+.win {
+    background: #00eaff !important;
+    color: black !important;
+    box-shadow: 0 0 25px #00eaff !important;
 }
 
-button:hover {
-  background: #ddd;
+/* Reset button */
+.reset-btn {
+    padding: 12px 25px;
+    font-size: 18px;
+    background: #00eaff;
+    border: none;
+    color: black;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.reset-btn:hover {
+    background: white;
+    transform: scale(1.1);
+}
+
+.status {
+    margin-top: 15px;
+    font-size: 20px;
+    text-shadow: 0 0 10px #fff;
 }
